@@ -1,13 +1,7 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "installCommand": "npm ci --production=false",
-  "framework": "nextjs",
-  "nodejs": "18.x",
-  "regions": ["all"],
   "functions": {
-    "app/**/*.{js,ts,tsx}": {
-      "runtime": "@vercel/node@2.15.10"
+    "app/api/**/*.{js,ts}": {
+      "runtime": "nodejs18.x"
     }
   },
   "headers": [
@@ -24,7 +18,7 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "X-Requested-With, Content-Type, Authorization"
+          "value": "Content-Type, Authorization"
         }
       ]
     }
@@ -34,6 +28,5 @@
       "source": "/((?!api/.*|_next/.*|_static/.*|favicon.ico).*)",
       "destination": "/"
     }
-  ],
-  "crons": []
+  ]
 }

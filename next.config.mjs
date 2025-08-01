@@ -3,18 +3,35 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
-  // Experimental features
+  // Experimental features for performance optimization
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    // Enable turbo for faster builds
+    ...(process.env.ANALYZE === 'true' && {
+      bundleAnalyzer: {
+        enabled: true,
+      }
+    })
   },
   
-  // Image optimization
+  // Image optimization configuration
   images: {
-    domains: [],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Allow placeholder images for development
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      }
+    ]
   },
+  
+  // Production optimizations (Vercel-compatible)
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
   
   // Only ignore eslint/typescript errors in development
   ...(process.env.NODE_ENV === 'development' && {
@@ -23,30 +40,9 @@ const nextConfig = {
     },
     typescript: {
       ignoreBuildErrors: true,
-    }
-  }),
-  
-  // Development-specific configurations
-  ...(process.env.NODE_ENV === 'development' && {
+    },
+    // Development-specific configurations for Clacky environment
     allowedDevOrigins: ['*.clackypaas.com'],
-  }),
-  
-  // Production optimizations
-  ...(process.env.NODE_ENV === 'production' && {
-    output: 'standalone',
-    compress: true,
-    poweredByHeader: false,
-    generateEtags: false,
-    
-    // Enable bundle analyzer in CI
-    ...(process.env.ANALYZE === 'true' && {
-      experimental: {
-        ...nextConfig.experimental,
-        bundleAnalyzer: {
-          enabled: true,
-        }
-      }
-    })
   })
 }
 
