@@ -1,99 +1,99 @@
 import { GameItem, Company, Challenge, ItemCategory } from '@/types/game'
 
 // Bill Gates' estimated wealth (as of 2024)
-export const BILL_GATES_WEALTH = 128_000_000_000 // $128 billion
+export const BILL_GATES_WEALTH = 134_000_000_000 // $134 billion (Forbes 2024)
 
 // Initial purchasable items categorized
 export const INITIAL_ITEMS: GameItem[] = [
-  // Food Category
+  // Daily Essentials & Food
   {
-    id: 'hamburger',
-    name: 'McDonald\'s Hamburger',
-    basePrice: 2,
-    currentPrice: 2,
+    id: 'apple',
+    name: 'Apple',
+    basePrice: 1,
+    currentPrice: 1,
     category: ItemCategory.FOOD,
-    description: 'A classic McDonald\'s hamburger',
+    description: 'A fresh red apple',
     owned: 0
   },
   {
-    id: 'coffee',
-    name: 'Starbucks Coffee',
+    id: 'bread_loaf',
+    name: 'Bread Loaf',
+    basePrice: 3,
+    currentPrice: 3,
+    category: ItemCategory.FOOD,
+    description: 'A loaf of fresh bread',
+    owned: 0
+  },
+  {
+    id: 'milk_gallon',
+    name: 'Gallon of Milk',
+    basePrice: 4,
+    currentPrice: 4,
+    category: ItemCategory.FOOD,
+    description: 'Fresh whole milk',
+    owned: 0
+  },
+  {
+    id: 'eggs_dozen',
+    name: 'Dozen Eggs',
     basePrice: 5,
     currentPrice: 5,
     category: ItemCategory.FOOD,
-    description: 'Premium coffee from Starbucks',
+    description: 'A dozen fresh eggs',
     owned: 0
   },
   {
-    id: 'donuts',
-    name: 'Box of Donuts',
+    id: 'coffee_cup',
+    name: 'Cup of Coffee',
+    basePrice: 5,
+    currentPrice: 5,
+    category: ItemCategory.FOOD,
+    description: 'A hot cup of coffee',
+    owned: 0
+  },
+  {
+    id: 'sandwich',
+    name: 'Sandwich',
+    basePrice: 8,
+    currentPrice: 8,
+    category: ItemCategory.FOOD,
+    description: 'A delicious sandwich',
+    owned: 0
+  },
+  {
+    id: 'pizza_slice',
+    name: 'Pizza Slice',
+    basePrice: 4,
+    currentPrice: 4,
+    category: ItemCategory.FOOD,
+    description: 'A slice of pizza',
+    owned: 0
+  },
+  {
+    id: 'burger_meal',
+    name: 'Burger Meal',
     basePrice: 12,
     currentPrice: 12,
     category: ItemCategory.FOOD,
-    description: 'A dozen fresh donuts from the bakery',
+    description: 'Burger with fries and drink',
     owned: 0
   },
   {
-    id: 'pizza',
-    name: 'Large Pizza',
-    basePrice: 20,
-    currentPrice: 20,
-    category: ItemCategory.FOOD,
-    description: 'A delicious large pizza for the whole family',
-    owned: 0
-  },
-  {
-    id: 'sushi_set',
-    name: 'Sushi Set',
-    basePrice: 45,
-    currentPrice: 45,
-    category: ItemCategory.FOOD,
-    description: 'Fresh sushi set with premium fish',
-    owned: 0
-  },
-  {
-    id: 'wine_bottle',
-    name: 'Fine Wine Bottle',
+    id: 'grocery_weekly',
+    name: 'Weekly Groceries',
     basePrice: 150,
     currentPrice: 150,
     category: ItemCategory.FOOD,
-    description: 'A bottle of premium wine from France',
+    description: 'A week\'s worth of groceries for a family',
     owned: 0
   },
   {
-    id: 'steak_dinner',
-    name: 'Fancy Steak Dinner',
-    basePrice: 200,
-    currentPrice: 200,
+    id: 'restaurant_dinner',
+    name: 'Restaurant Dinner',
+    basePrice: 80,
+    currentPrice: 80,
     category: ItemCategory.FOOD,
-    description: 'A premium steak dinner at a high-end restaurant',
-    owned: 0
-  },
-  {
-    id: 'michelin_meal',
-    name: 'Michelin Star Meal',
-    basePrice: 500,
-    currentPrice: 500,
-    category: ItemCategory.FOOD,
-    description: 'An exquisite meal at a Michelin-starred restaurant',
-    owned: 0
-  },
-  {
-    id: 'truffle_dinner',
-    name: 'Truffle Tasting Menu',
-    basePrice: 1_500,
-    currentPrice: 1_500,
-    category: ItemCategory.FOOD,
-    description: 'A luxurious tasting menu featuring rare truffles',
-    owned: 0
-  },
-  {
-    id: 'caviar_service',
-    name: 'Premium Caviar Service',
-    basePrice: 3_000,
-    currentPrice: 3_000,
-    category: ItemCategory.FOOD,
-    description: 'The finest caviar served with champagne',
+    description: 'Dinner at a nice restaurant',
     owned: 0
   },
 
@@ -104,52 +104,52 @@ export const INITIAL_ITEMS: GameItem[] = [
     basePrice: 3,
     currentPrice: 3,
     category: ItemCategory.TRANSPORT,
-    description: 'A single bus ride across the city',
+    description: 'A single bus ride',
     owned: 0
   },
   {
-    id: 'subway_pass',
-    name: 'Monthly Subway Pass',
-    basePrice: 120,
-    currentPrice: 120,
+    id: 'subway_ticket',
+    name: 'Subway Ticket',
+    basePrice: 3,
+    currentPrice: 3,
     category: ItemCategory.TRANSPORT,
-    description: 'Unlimited public transportation for a month',
+    description: 'A subway train ride',
     owned: 0
   },
   {
-    id: 'scooter',
-    name: 'Electric Scooter',
-    basePrice: 400,
-    currentPrice: 400,
+    id: 'taxi_ride',
+    name: 'Taxi Ride',
+    basePrice: 15,
+    currentPrice: 15,
     category: ItemCategory.TRANSPORT,
-    description: 'A convenient electric scooter for short trips',
-    owned: 0
-  },
-  {
-    id: 'bicycle',
-    name: 'Mountain Bike',
-    basePrice: 500,
-    currentPrice: 500,
-    category: ItemCategory.TRANSPORT,
-    description: 'A high-quality mountain bike',
+    description: 'A short taxi ride across town',
     owned: 0
   },
   {
     id: 'uber_ride',
-    name: 'Uber Premium Ride',
-    basePrice: 800,
-    currentPrice: 800,
+    name: 'Uber Ride',
+    basePrice: 12,
+    currentPrice: 12,
     category: ItemCategory.TRANSPORT,
-    description: 'A long-distance premium Uber ride',
+    description: 'A convenient rideshare trip',
     owned: 0
   },
   {
-    id: 'used_car',
-    name: 'Used Honda Civic',
-    basePrice: 15_000,
-    currentPrice: 15_000,
+    id: 'bicycle',
+    name: 'Bicycle',
+    basePrice: 300,
+    currentPrice: 300,
     category: ItemCategory.TRANSPORT,
-    description: 'A reliable used car for daily commuting',
+    description: 'A basic bicycle for daily commuting',
+    owned: 0
+  },
+  {
+    id: 'electric_scooter',
+    name: 'Electric Scooter',
+    basePrice: 500,
+    currentPrice: 500,
+    category: ItemCategory.TRANSPORT,
+    description: 'An electric scooter for short trips',
     owned: 0
   },
   {
@@ -225,7 +225,70 @@ export const INITIAL_ITEMS: GameItem[] = [
     owned: 0
   },
 
-  // Technology Category
+  // Household & Personal Items
+  {
+    id: 'toothbrush',
+    name: 'Toothbrush',
+    basePrice: 5,
+    currentPrice: 5,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A basic toothbrush for dental hygiene',
+    owned: 0
+  },
+  {
+    id: 'towel',
+    name: 'Towel',
+    basePrice: 15,
+    currentPrice: 15,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A soft bath towel',
+    owned: 0
+  },
+  {
+    id: 'pillow',
+    name: 'Pillow',
+    basePrice: 25,
+    currentPrice: 25,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A comfortable sleeping pillow',
+    owned: 0
+  },
+  {
+    id: 'bed_sheets',
+    name: 'Bed Sheets Set',
+    basePrice: 50,
+    currentPrice: 50,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A comfortable bed sheet set',
+    owned: 0
+  },
+  {
+    id: 'table_lamp',
+    name: 'Table Lamp',
+    basePrice: 40,
+    currentPrice: 40,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A simple desk lamp for reading',
+    owned: 0
+  },
+  {
+    id: 'coffee_maker',
+    name: 'Coffee Maker',
+    basePrice: 80,
+    currentPrice: 80,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A basic coffee maker for home use',
+    owned: 0
+  },
+  {
+    id: 'microwave',
+    name: 'Microwave Oven',
+    basePrice: 120,
+    currentPrice: 120,
+    category: ItemCategory.TECHNOLOGY,
+    description: 'A microwave oven for quick heating',
+    owned: 0
+  },
   {
     id: 'earbuds',
     name: 'Wireless Earbuds',
@@ -246,11 +309,11 @@ export const INITIAL_ITEMS: GameItem[] = [
   },
   {
     id: 'laptop',
-    name: 'MacBook Pro',
-    basePrice: 2_500,
-    currentPrice: 2_500,
+    name: 'MacBook Pro (Fully Configured)',
+    basePrice: 7_000,
+    currentPrice: 7_000,
     category: ItemCategory.TECHNOLOGY,
-    description: 'High-performance laptop for professionals',
+    description: 'Top-spec MacBook Pro with maximum RAM and storage',
     owned: 0
   },
   {
@@ -325,15 +388,7 @@ export const INITIAL_ITEMS: GameItem[] = [
     description: 'Professional server setup for data storage',
     owned: 0
   },
-  {
-    id: 'quantum_computer',
-    name: 'Quantum Computer Access',
-    basePrice: 10_000_000,
-    currentPrice: 10_000_000,
-    category: ItemCategory.TECHNOLOGY,
-    description: 'Access to quantum computing resources',
-    owned: 0
-  },
+
 
   // Real Estate Category
   {
@@ -417,26 +472,99 @@ export const INITIAL_ITEMS: GameItem[] = [
     description: 'A beautifully restored historic mansion',
     owned: 0
   },
-  {
-    id: 'private_island',
-    name: 'Private Island',
-    basePrice: 100_000_000,
-    currentPrice: 100_000_000,
-    category: ItemCategory.REAL_ESTATE,
-    description: 'Your own private tropical island paradise',
-    owned: 0
-  },
-  {
-    id: 'skyscraper',
-    name: 'Commercial Skyscraper',
-    basePrice: 500_000_000,
-    currentPrice: 500_000_000,
-    category: ItemCategory.REAL_ESTATE,
-    description: 'A massive skyscraper in financial district',
-    owned: 0
-  },
 
-  // Luxury Category
+
+  // Sports & Recreation Category
+  {
+    id: 'basketball',
+    name: 'Basketball',
+    basePrice: 25,
+    currentPrice: 25,
+    category: ItemCategory.LUXURY,
+    description: 'A standard basketball for casual play',
+    owned: 0
+  },
+  {
+    id: 'soccer_ball',
+    name: 'Soccer Ball',
+    basePrice: 30,
+    currentPrice: 30,
+    category: ItemCategory.LUXURY,
+    description: 'A quality soccer ball for the game',
+    owned: 0
+  },
+  {
+    id: 'running_shoes',
+    name: 'Running Shoes',
+    basePrice: 120,
+    currentPrice: 120,
+    category: ItemCategory.LUXURY,
+    description: 'Professional running shoes for athletes',
+    owned: 0
+  },
+  {
+    id: 'gym_equipment',
+    name: 'Home Gym Set',
+    basePrice: 800,
+    currentPrice: 800,
+    category: ItemCategory.LUXURY,
+    description: 'Basic home gym equipment including dumbbells and bench',
+    owned: 0
+  },
+  {
+    id: 'tennis_racket',
+    name: 'Professional Tennis Racket',
+    basePrice: 300,
+    currentPrice: 300,
+    category: ItemCategory.LUXURY,
+    description: 'High-quality tennis racket used by pros',
+    owned: 0
+  },
+  {
+    id: 'mountain_bike_pro',
+    name: 'Professional Mountain Bike',
+    basePrice: 2_500,
+    currentPrice: 2_500,
+    category: ItemCategory.LUXURY,
+    description: 'Top-tier mountain bike for serious cyclists',
+    owned: 0
+  },
+  {
+    id: 'golf_set',
+    name: 'Professional Golf Set',
+    basePrice: 3_500,
+    currentPrice: 3_500,
+    category: ItemCategory.LUXURY,
+    description: 'Complete professional golf club set with bag',
+    owned: 0
+  },
+  {
+    id: 'home_gym_full',
+    name: 'Complete Home Gym',
+    basePrice: 15_000,
+    currentPrice: 15_000,
+    category: ItemCategory.LUXURY,
+    description: 'Professional-grade complete home gym setup',
+    owned: 0
+  },
+  {
+    id: 'sailing_boat',
+    name: 'Sailing Boat',
+    basePrice: 80_000,
+    currentPrice: 80_000,
+    category: ItemCategory.LUXURY,
+    description: 'A beautiful sailing boat for water sports',
+    owned: 0
+  },
+  {
+    id: 'golf_membership',
+    name: 'Exclusive Golf Club Membership',
+    basePrice: 100_000,
+    currentPrice: 100_000,
+    category: ItemCategory.LUXURY,
+    description: 'Lifetime membership to an exclusive golf club',
+    owned: 0
+  },
   {
     id: 'designer_handbag',
     name: 'Designer Handbag',
@@ -546,243 +674,99 @@ export const INITIAL_ITEMS: GameItem[] = [
     owned: 0
   },
 
-  // Business Category
+  // Large Purchases & Services
   {
-    id: 'food_truck_business',
-    name: 'Food Truck Business',
-    basePrice: 100_000,
-    currentPrice: 100_000,
+    id: 'gym_membership',
+    name: 'Annual Gym Membership',
+    basePrice: 600,
+    currentPrice: 600,
     category: ItemCategory.BUSINESS,
-    description: 'Start your own mobile food business',
+    description: 'A yearly membership to a fitness center',
     owned: 0
   },
   {
-    id: 'coffee_shop',
-    name: 'Coffee Shop',
-    basePrice: 300_000,
-    currentPrice: 300_000,
+    id: 'house_cleaning',
+    name: 'House Cleaning Service',
+    basePrice: 150,
+    currentPrice: 150,
     category: ItemCategory.BUSINESS,
-    description: 'A cozy neighborhood coffee shop',
+    description: 'Professional house cleaning service',
     owned: 0
   },
   {
-    id: 'retail_store',
-    name: 'Boutique Retail Store',
-    basePrice: 500_000,
-    currentPrice: 500_000,
+    id: 'lawn_service',
+    name: 'Lawn Care Service',
+    basePrice: 80,
+    currentPrice: 80,
     category: ItemCategory.BUSINESS,
-    description: 'A trendy boutique in a prime location',
+    description: 'Professional lawn mowing and maintenance',
     owned: 0
   },
   {
-    id: 'fitness_center',
-    name: 'Fitness Center',
-    basePrice: 1_000_000,
-    currentPrice: 1_000_000,
+    id: 'pool_cleaning',
+    name: 'Pool Cleaning Service',
+    basePrice: 100,
+    currentPrice: 100,
     category: ItemCategory.BUSINESS,
-    description: 'A modern fitness center with all equipment',
+    description: 'Weekly pool cleaning and maintenance',
     owned: 0
   },
   {
-    id: 'restaurant',
-    name: 'Fine Dining Restaurant',
-    basePrice: 2_000_000,
-    currentPrice: 2_000_000,
+    id: 'personal_trainer',
+    name: 'Personal Trainer (Monthly)',
+    basePrice: 800,
+    currentPrice: 800,
     category: ItemCategory.BUSINESS,
-    description: 'An upscale restaurant with expert chefs',
+    description: 'Monthly personal training sessions',
     owned: 0
   },
   {
-    id: 'hotel',
-    name: 'Boutique Hotel',
-    basePrice: 10_000_000,
-    currentPrice: 10_000_000,
+    id: 'interior_designer',
+    name: 'Interior Design Service',
+    basePrice: 5_000,
+    currentPrice: 5_000,
     category: ItemCategory.BUSINESS,
-    description: 'A luxury boutique hotel in the city center',
+    description: 'Professional interior design for your home',
     owned: 0
   },
   {
-    id: 'tech_startup',
-    name: 'Tech Startup',
-    basePrice: 50_000_000,
-    currentPrice: 50_000_000,
+    id: 'wedding_planner',
+    name: 'Wedding Planning Service',
+    basePrice: 8_000,
+    currentPrice: 8_000,
     category: ItemCategory.BUSINESS,
-    description: 'Invest in a promising technology startup',
+    description: 'Complete wedding planning and coordination',
     owned: 0
   },
   {
-    id: 'manufacturing_plant',
-    name: 'Manufacturing Plant',
-    basePrice: 200_000_000,
-    currentPrice: 200_000_000,
+    id: 'private_chef',
+    name: 'Private Chef (Monthly)',
+    basePrice: 12_000,
+    currentPrice: 12_000,
     category: ItemCategory.BUSINESS,
-    description: 'A state-of-the-art manufacturing facility',
+    description: 'Personal chef service for a month',
     owned: 0
   },
   {
-    id: 'airline',
-    name: 'Regional Airline',
-    basePrice: 500_000_000,
-    currentPrice: 500_000_000,
+    id: 'security_service',
+    name: 'Home Security System',
+    basePrice: 3_000,
+    currentPrice: 3_000,
     category: ItemCategory.BUSINESS,
-    description: 'Your own regional airline company',
+    description: 'Complete home security system installation',
     owned: 0
   },
   {
-    id: 'movie_studio',
-    name: 'Movie Studio',
-    basePrice: 1_000_000_000,
-    currentPrice: 1_000_000_000,
+    id: 'spa_package',
+    name: 'Luxury Spa Package',
+    basePrice: 2_000,
+    currentPrice: 2_000,
     category: ItemCategory.BUSINESS,
-    description: 'Your own Hollywood movie production studio',
-    owned: 0
-  },
-  {
-    id: 'social_media_platform',
-    name: 'Social Media Platform',
-    basePrice: 5_000_000_000,
-    currentPrice: 5_000_000_000,
-    category: ItemCategory.BUSINESS,
-    description: 'Build and own a global social media platform',
+    description: 'Weekend luxury spa experience',
     owned: 0
   },
 
-  // Charity Category
-  {
-    id: 'food_bank_donation',
-    name: 'Food Bank Donation',
-    basePrice: 5_000,
-    currentPrice: 5_000,
-    category: ItemCategory.CHARITY,
-    description: 'Donate meals to local food banks',
-    owned: 0
-  },
-  {
-    id: 'homeless_shelter',
-    name: 'Homeless Shelter Support',
-    basePrice: 25_000,
-    currentPrice: 25_000,
-    category: ItemCategory.CHARITY,
-    description: 'Support homeless shelters in your community',
-    owned: 0
-  },
-  {
-    id: 'animal_shelter',
-    name: 'Animal Shelter Donation',
-    basePrice: 50_000,
-    currentPrice: 50_000,
-    category: ItemCategory.CHARITY,
-    description: 'Help abandoned animals find loving homes',
-    owned: 0
-  },
-  {
-    id: 'school_donation',
-    name: 'School Donation',
-    basePrice: 100_000,
-    currentPrice: 100_000,
-    category: ItemCategory.CHARITY,
-    description: 'Donate to improve education for children',
-    owned: 0
-  },
-  {
-    id: 'clean_water',
-    name: 'Clean Water Project',
-    basePrice: 500_000,
-    currentPrice: 500_000,
-    category: ItemCategory.CHARITY,
-    description: 'Provide clean water access to communities in need',
-    owned: 0
-  },
-  {
-    id: 'scholarship_fund',
-    name: 'Scholarship Fund',
-    basePrice: 1_000_000,
-    currentPrice: 1_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Create scholarships for underprivileged students',
-    owned: 0
-  },
-  {
-    id: 'disaster_relief',
-    name: 'Disaster Relief Fund',
-    basePrice: 5_000_000,
-    currentPrice: 5_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Support communities affected by natural disasters',
-    owned: 0
-  },
-  {
-    id: 'hospital_wing',
-    name: 'Hospital Wing',
-    basePrice: 10_000_000,
-    currentPrice: 10_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Fund a new wing for a local hospital',
-    owned: 0
-  },
-  {
-    id: 'arts_education',
-    name: 'Arts Education Program',
-    basePrice: 25_000_000,
-    currentPrice: 25_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Support arts education in schools nationwide',
-    owned: 0
-  },
-  {
-    id: 'renewable_energy',
-    name: 'Renewable Energy Project',
-    basePrice: 75_000_000,
-    currentPrice: 75_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Fund sustainable energy projects for communities',
-    owned: 0
-  },
-  {
-    id: 'climate_research',
-    name: 'Climate Research Fund',
-    basePrice: 100_000_000,
-    currentPrice: 100_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Support critical climate change research',
-    owned: 0
-  },
-  {
-    id: 'wildlife_conservation',
-    name: 'Wildlife Conservation',
-    basePrice: 250_000_000,
-    currentPrice: 250_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Protect endangered species and their habitats',
-    owned: 0
-  },
-  {
-    id: 'global_health',
-    name: 'Global Health Initiative',
-    basePrice: 1_000_000_000,
-    currentPrice: 1_000_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Fund global health programs like the Gates Foundation',
-    owned: 0
-  },
-  {
-    id: 'poverty_eradication',
-    name: 'Global Poverty Eradication',
-    basePrice: 5_000_000_000,
-    currentPrice: 5_000_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Comprehensive program to end poverty worldwide',
-    owned: 0
-  },
-  {
-    id: 'space_exploration',
-    name: 'Space Exploration Fund',
-    basePrice: 25_000_000_000,
-    currentPrice: 25_000_000_000,
-    category: ItemCategory.CHARITY,
-    description: 'Advance human space exploration for the benefit of all',
-    owned: 0
-  }
+
 ]
 
 // Companies based on Bill Gates' real investment portfolio - Player starts with these companies
@@ -792,8 +776,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Microsoft Corporation',
     basePrice: 3_000_000_000_000, // $3T market cap
     currentPrice: 3_000_000_000_000,
-    baseIncomePerSecond: 2_000_000, // $63B annual revenue / 31.5M seconds
-    currentIncomePerSecond: 2_000_000,
+    baseIncomePerSecond: 80, // Realistic Gates income from Microsoft holdings
+    currentIncomePerSecond: 80,
     owned: 1, // Gates still holds significant Microsoft stake
     description: 'The technology giant Bill Gates co-founded, leading in cloud computing and software',
     upgradeMultiplier: 1.08
@@ -803,8 +787,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Berkshire Hathaway',
     basePrice: 900_000_000_000, // $900B market cap
     currentPrice: 900_000_000_000,
-    baseIncomePerSecond: 900_000, // Warren Buffett company Gates invests in
-    currentIncomePerSecond: 900_000,
+    baseIncomePerSecond: 25, // Realistic Gates income from Berkshire investment
+    currentIncomePerSecond: 25,
     owned: 1,
     description: 'Warren Buffett\'s investment conglomerate, a major holding in Gates\' portfolio',
     upgradeMultiplier: 1.06
@@ -814,8 +798,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Canadian National Railway',
     basePrice: 85_000_000_000,
     currentPrice: 85_000_000_000,
-    baseIncomePerSecond: 450_000,
-    currentIncomePerSecond: 450_000,
+    baseIncomePerSecond: 12,
+    currentIncomePerSecond: 12,
     owned: 2, // Gates Foundation holds significant stakes
     description: 'North America\'s largest railway network, a key infrastructure investment',
     upgradeMultiplier: 1.04
@@ -825,8 +809,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Waste Management Inc.',
     basePrice: 70_000_000_000,
     currentPrice: 70_000_000_000,
-    baseIncomePerSecond: 380_000,
-    currentIncomePerSecond: 380_000,
+    baseIncomePerSecond: 8,
+    currentIncomePerSecond: 8,
     owned: 1,
     description: 'Leading waste collection and environmental services company',
     upgradeMultiplier: 1.05
@@ -836,8 +820,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Caterpillar Inc.',
     basePrice: 150_000_000_000,
     currentPrice: 150_000_000_000,
-    baseIncomePerSecond: 720_000,
-    currentIncomePerSecond: 720_000,
+    baseIncomePerSecond: 15,
+    currentIncomePerSecond: 15,
     owned: 1,
     description: 'World\'s leading manufacturer of construction and mining equipment',
     upgradeMultiplier: 1.05
@@ -847,8 +831,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Walmart Inc.',
     basePrice: 600_000_000_000,
     currentPrice: 600_000_000_000,
-    baseIncomePerSecond: 1_800_000, // $572B annual revenue
-    currentIncomePerSecond: 1_800_000,
+    baseIncomePerSecond: 10, // Realistic return from Walmart holdings
+    currentIncomePerSecond: 10,
     owned: 1,
     description: 'World\'s largest retailer by revenue and number of employees',
     upgradeMultiplier: 1.04
@@ -858,8 +842,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'United Parcel Service',
     basePrice: 120_000_000_000,
     currentPrice: 120_000_000_000,
-    baseIncomePerSecond: 350_000,
-    currentIncomePerSecond: 350_000,
+    baseIncomePerSecond: 4,
+    currentIncomePerSecond: 4,
     owned: 1,
     description: 'Global leader in logistics and package delivery services',
     upgradeMultiplier: 1.04
@@ -869,8 +853,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'FedEx Corporation',
     basePrice: 65_000_000_000,
     currentPrice: 65_000_000_000,
-    baseIncomePerSecond: 280_000,
-    currentIncomePerSecond: 280_000,
+    baseIncomePerSecond: 3,
+    currentIncomePerSecond: 3,
     owned: 1,
     description: 'Major American multinational delivery services company',
     upgradeMultiplier: 1.04
@@ -880,8 +864,8 @@ export const INITIAL_COMPANIES: Company[] = [
     name: 'Ecolab Inc.',
     basePrice: 60_000_000_000,
     currentPrice: 60_000_000_000,
-    baseIncomePerSecond: 250_000,
-    currentIncomePerSecond: 250_000,
+    baseIncomePerSecond: 2,
+    currentIncomePerSecond: 2,
     owned: 1,
     description: 'Global leader in water, hygiene and infection prevention solutions',
     upgradeMultiplier: 1.05
