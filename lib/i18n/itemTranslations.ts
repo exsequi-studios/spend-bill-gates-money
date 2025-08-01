@@ -7,72 +7,72 @@ export interface ItemTranslation {
 }
 
 export const itemTranslations: Record<string, Record<Language, ItemTranslation>> = {
-  // Food Category Items
-  hamburger: {
-    en: { name: 'McDonald\'s Hamburger', description: 'A classic McDonald\'s hamburger' },
-    zh: { name: '麦当劳汉堡', description: '经典的麦当劳汉堡' }
+  // Daily Essentials & Food Items
+  apple: {
+    en: { name: 'Apple', description: 'A fresh red apple' },
+    zh: { name: '苹果', description: '新鲜的红苹果' }
   },
-  coffee: {
-    en: { name: 'Starbucks Coffee', description: 'Premium coffee from Starbucks' },
-    zh: { name: '星巴克咖啡', description: '来自星巴克的优质咖啡' }
+  bread_loaf: {
+    en: { name: 'Bread Loaf', description: 'A loaf of fresh bread' },
+    zh: { name: '面包', description: '新鲜的面包' }
   },
-  donuts: {
-    en: { name: 'Box of Donuts', description: 'A dozen fresh donuts from the bakery' },
-    zh: { name: '甜甜圈盒子', description: '来自面包店的一打新鲜甜甜圈' }
+  milk_gallon: {
+    en: { name: 'Gallon of Milk', description: 'Fresh whole milk' },
+    zh: { name: '牛奶', description: '新鲜全脂牛奶' }
   },
-  pizza: {
-    en: { name: 'Large Pizza', description: 'A delicious large pizza for the whole family' },
-    zh: { name: '大披萨', description: '适合全家享用的美味大披萨' }
+  eggs_dozen: {
+    en: { name: 'Dozen Eggs', description: 'A dozen fresh eggs' },
+    zh: { name: '鸡蛋（一打）', description: '一打新鲜鸡蛋' }
   },
-  sushi_set: {
-    en: { name: 'Sushi Set', description: 'Fresh sushi set with premium fish' },
-    zh: { name: '寿司套餐', description: '使用优质鱼类制作的新鲜寿司套餐' }
+  coffee_cup: {
+    en: { name: 'Cup of Coffee', description: 'A hot cup of coffee' },
+    zh: { name: '咖啡', description: '一杯热咖啡' }
   },
-  wine_bottle: {
-    en: { name: 'Fine Wine Bottle', description: 'A bottle of premium wine from France' },
-    zh: { name: '精品红酒', description: '来自法国的优质红酒' }
+  sandwich: {
+    en: { name: 'Sandwich', description: 'A delicious sandwich' },
+    zh: { name: '三明治', description: '美味的三明治' }
   },
-  steak_dinner: {
-    en: { name: 'Fancy Steak Dinner', description: 'A premium steak dinner at a high-end restaurant' },
-    zh: { name: '高档牛排晚餐', description: '在高端餐厅享用的优质牛排晚餐' }
+  pizza_slice: {
+    en: { name: 'Pizza Slice', description: 'A slice of pizza' },
+    zh: { name: '披萨', description: '一块披萨' }
   },
-  michelin_meal: {
-    en: { name: 'Michelin Star Meal', description: 'An exquisite meal at a Michelin-starred restaurant' },
-    zh: { name: '米其林星级餐厅', description: '在米其林星级餐厅享用的精致美食' }
+  burger_meal: {
+    en: { name: 'Burger Meal', description: 'Burger with fries and drink' },
+    zh: { name: '汉堡套餐', description: '汉堡加薯条和饮料' }
   },
-  truffle_dinner: {
-    en: { name: 'Truffle Tasting Menu', description: 'A luxurious tasting menu featuring rare truffles' },
-    zh: { name: '松露品鉴菜单', description: '以珍贵松露为特色的奢华品鉴菜单' }
+  grocery_weekly: {
+    en: { name: 'Weekly Groceries', description: 'A week\'s worth of groceries for a family' },
+    zh: { name: '周购物', description: '一家人一周的生活用品' }
   },
-  caviar_service: {
-    en: { name: 'Premium Caviar Service', description: 'The finest caviar served with champagne' },
-    zh: { name: '顶级鱼子酱服务', description: '配香槟的顶级鱼子酱服务' }
+  restaurant_dinner: {
+    en: { name: 'Restaurant Dinner', description: 'Dinner at a nice restaurant' },
+    zh: { name: '餐厅晚餐', description: '在不错的餐厅吃晚餐' }
   },
 
   // Transport Category Items
   bus_ticket: {
-    en: { name: 'Bus Ticket', description: 'A single bus ride across the city' },
-    zh: { name: '公交车票', description: '城市内单次公交车乘坐' }
+    en: { name: 'Bus Ticket', description: 'A single bus ride' },
+    zh: { name: '公交车票', description: '一次公交车乘坐' }
   },
-  subway_pass: {
-    en: { name: 'Monthly Subway Pass', description: 'Unlimited public transportation for a month' },
-    zh: { name: '地铁月票', description: '一个月无限次公共交通出行' }
+  subway_ticket: {
+    en: { name: 'Subway Ticket', description: 'A subway train ride' },
+    zh: { name: '地铁票', description: '一次地铁乘坐' }
   },
-  scooter: {
-    en: { name: 'Electric Scooter', description: 'A convenient electric scooter for short trips' },
-    zh: { name: '电动滑板车', description: '适合短途出行的便捷电动滑板车' }
-  },
-  bicycle: {
-    en: { name: 'Mountain Bike', description: 'A high-quality mountain bike' },
-    zh: { name: '山地自行车', description: '高品质的山地自行车' }
+  taxi_ride: {
+    en: { name: 'Taxi Ride', description: 'A short taxi ride across town' },
+    zh: { name: '出租车', description: '城内短程出租车' }
   },
   uber_ride: {
-    en: { name: 'Uber Premium Ride', description: 'A long-distance premium Uber ride' },
-    zh: { name: '优步高端服务', description: '长途优步高端乘车服务' }
+    en: { name: 'Uber Ride', description: 'A convenient rideshare trip' },
+    zh: { name: '优步打车', description: '便捷的网约车出行' }
   },
-  used_car: {
-    en: { name: 'Used Honda Civic', description: 'A reliable used car for daily commuting' },
-    zh: { name: '二手本田思域', description: '可靠的日常通勤二手车' }
+  bicycle: {
+    en: { name: 'Bicycle', description: 'A basic bicycle for daily commuting' },
+    zh: { name: '自行车', description: '日常通勤用的基本自行车' }
+  },
+  electric_scooter: {
+    en: { name: 'Electric Scooter', description: 'An electric scooter for short trips' },
+    zh: { name: '电动滑板车', description: '短途出行用的电动滑板车' }
   },
   motorcycle: {
     en: { name: 'Harley Davidson', description: 'A classic Harley Davidson motorcycle' },
@@ -107,7 +107,35 @@ export const itemTranslations: Record<string, Record<Language, ItemTranslation>>
     zh: { name: '超级游艇', description: '配备全套船员的巨型豪华游艇' }
   },
 
-  // Technology Category Items
+  // Household & Personal Items
+  toothbrush: {
+    en: { name: 'Toothbrush', description: 'A basic toothbrush for dental hygiene' },
+    zh: { name: '牙刷', description: '基本的牙齿清洁牙刷' }
+  },
+  towel: {
+    en: { name: 'Towel', description: 'A soft bath towel' },
+    zh: { name: '毛巾', description: '柔软的浴巾' }
+  },
+  pillow: {
+    en: { name: 'Pillow', description: 'A comfortable sleeping pillow' },
+    zh: { name: '枕头', description: '舒适的睡眠枕头' }
+  },
+  bed_sheets: {
+    en: { name: 'Bed Sheets Set', description: 'A comfortable bed sheet set' },
+    zh: { name: '床单被套', description: '舒适的床单被套装' }
+  },
+  table_lamp: {
+    en: { name: 'Table Lamp', description: 'A simple desk lamp for reading' },
+    zh: { name: '台灯', description: '简单的阅读台灯' }
+  },
+  coffee_maker: {
+    en: { name: 'Coffee Maker', description: 'A basic coffee maker for home use' },
+    zh: { name: '咖啡机', description: '家用基本咖啡机' }
+  },
+  microwave: {
+    en: { name: 'Microwave Oven', description: 'A microwave oven for quick heating' },
+    zh: { name: '微波炉', description: '快速加热的微波炉' }
+  },
   earbuds: {
     en: { name: 'Wireless Earbuds', description: 'High-quality wireless earbuds with noise cancellation' },
     zh: { name: '无线耳机', description: '带降噪功能的高品质无线耳机' }
@@ -117,8 +145,8 @@ export const itemTranslations: Record<string, Record<Language, ItemTranslation>>
     zh: { name: 'iPad Pro', description: '专业工作和创意平板电脑' }
   },
   laptop: {
-    en: { name: 'MacBook Pro', description: 'High-performance laptop for professionals' },
-    zh: { name: 'MacBook Pro', description: '专业人士的高性能笔记本电脑' }
+    en: { name: 'MacBook Pro (Fully Configured)', description: 'Top-spec MacBook Pro with maximum RAM and storage' },
+    zh: { name: 'MacBook Pro（顶配版）', description: '配备最大内存和存储的顶配MacBook Pro' }
   },
   smartphone: {
     en: { name: 'iPhone 15 Pro', description: 'The latest iPhone with advanced features' },
@@ -152,10 +180,7 @@ export const itemTranslations: Record<string, Record<Language, ItemTranslation>>
     en: { name: 'Personal Server Rack', description: 'Professional server setup for data storage' },
     zh: { name: '个人服务器机架', description: '专业数据存储服务器设置' }
   },
-  quantum_computer: {
-    en: { name: 'Quantum Computer Access', description: 'Access to quantum computing resources' },
-    zh: { name: '量子计算机使用权', description: '量子计算资源使用权限' }
-  },
+
 
   // Real Estate Category Items
   parking_space: {
@@ -253,18 +278,46 @@ export const itemTranslations: Record<string, Record<Language, ItemTranslation>>
     zh: { name: '太空旅游套餐', description: '终极奢华体验：太空之旅' }
   },
 
-  // Business Category Items
-  food_truck_business: {
-    en: { name: 'Food Truck Business', description: 'Start your own mobile food business' },
-    zh: { name: '餐车生意', description: '开始您自己的移动食品业务' }
+  // Large Purchases & Services
+  gym_membership: {
+    en: { name: 'Annual Gym Membership', description: 'A yearly membership to a fitness center' },
+    zh: { name: '年度健身会员', description: '健身中心的年度会员资格' }
   },
-  coffee_shop: {
-    en: { name: 'Coffee Shop', description: 'A cozy neighborhood coffee shop' },
-    zh: { name: '咖啡店', description: '温馨的社区咖啡店' }
+  house_cleaning: {
+    en: { name: 'House Cleaning Service', description: 'Professional house cleaning service' },
+    zh: { name: '家政清洁服务', description: '专业的家庭清洁服务' }
   },
-  retail_store: {
-    en: { name: 'Boutique Retail Store', description: 'A trendy boutique in a prime location' },
-    zh: { name: '精品零售店', description: '位于黄金地段的时尚精品店' }
+  lawn_service: {
+    en: { name: 'Lawn Care Service', description: 'Professional lawn mowing and maintenance' },
+    zh: { name: '草坪护理服务', description: '专业的草坪修剪和维护' }
+  },
+  pool_cleaning: {
+    en: { name: 'Pool Cleaning Service', description: 'Weekly pool cleaning and maintenance' },
+    zh: { name: '泳池清洁服务', description: '每周泳池清洁和维护' }
+  },
+  personal_trainer: {
+    en: { name: 'Personal Trainer (Monthly)', description: 'Monthly personal training sessions' },
+    zh: { name: '私人教练（包月）', description: '月度个人训练课程' }
+  },
+  interior_designer: {
+    en: { name: 'Interior Design Service', description: 'Professional interior design for your home' },
+    zh: { name: '室内设计服务', description: '为您的家提供专业室内设计' }
+  },
+  wedding_planner: {
+    en: { name: 'Wedding Planning Service', description: 'Complete wedding planning and coordination' },
+    zh: { name: '婚礼策划服务', description: '全面的婚礼策划和协调' }
+  },
+  private_chef: {
+    en: { name: 'Private Chef (Monthly)', description: 'Personal chef service for a month' },
+    zh: { name: '私人厨师（包月）', description: '一个月的私人厨师服务' }
+  },
+  security_service: {
+    en: { name: 'Home Security System', description: 'Complete home security system installation' },
+    zh: { name: '家庭安防系统', description: '完整的家庭安防系统安装' }
+  },
+  spa_package: {
+    en: { name: 'Luxury Spa Package', description: 'Weekend luxury spa experience' },
+    zh: { name: '豪华温泉套餐', description: '周末豪华温泉体验' }
   },
   fitness_center: {
     en: { name: 'Fitness Center', description: 'A modern fitness center with all equipment' },
