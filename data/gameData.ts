@@ -474,7 +474,97 @@ export const INITIAL_ITEMS: GameItem[] = [
   },
 
 
-  // Luxury Category
+  // Sports & Recreation Category
+  {
+    id: 'basketball',
+    name: 'Basketball',
+    basePrice: 25,
+    currentPrice: 25,
+    category: ItemCategory.LUXURY,
+    description: 'A standard basketball for casual play',
+    owned: 0
+  },
+  {
+    id: 'soccer_ball',
+    name: 'Soccer Ball',
+    basePrice: 30,
+    currentPrice: 30,
+    category: ItemCategory.LUXURY,
+    description: 'A quality soccer ball for the game',
+    owned: 0
+  },
+  {
+    id: 'running_shoes',
+    name: 'Running Shoes',
+    basePrice: 120,
+    currentPrice: 120,
+    category: ItemCategory.LUXURY,
+    description: 'Professional running shoes for athletes',
+    owned: 0
+  },
+  {
+    id: 'gym_equipment',
+    name: 'Home Gym Set',
+    basePrice: 800,
+    currentPrice: 800,
+    category: ItemCategory.LUXURY,
+    description: 'Basic home gym equipment including dumbbells and bench',
+    owned: 0
+  },
+  {
+    id: 'tennis_racket',
+    name: 'Professional Tennis Racket',
+    basePrice: 300,
+    currentPrice: 300,
+    category: ItemCategory.LUXURY,
+    description: 'High-quality tennis racket used by pros',
+    owned: 0
+  },
+  {
+    id: 'mountain_bike_pro',
+    name: 'Professional Mountain Bike',
+    basePrice: 2_500,
+    currentPrice: 2_500,
+    category: ItemCategory.LUXURY,
+    description: 'Top-tier mountain bike for serious cyclists',
+    owned: 0
+  },
+  {
+    id: 'golf_set',
+    name: 'Professional Golf Set',
+    basePrice: 3_500,
+    currentPrice: 3_500,
+    category: ItemCategory.LUXURY,
+    description: 'Complete professional golf club set with bag',
+    owned: 0
+  },
+  {
+    id: 'home_gym_full',
+    name: 'Complete Home Gym',
+    basePrice: 15_000,
+    currentPrice: 15_000,
+    category: ItemCategory.LUXURY,
+    description: 'Professional-grade complete home gym setup',
+    owned: 0
+  },
+  {
+    id: 'sailing_boat',
+    name: 'Sailing Boat',
+    basePrice: 80_000,
+    currentPrice: 80_000,
+    category: ItemCategory.LUXURY,
+    description: 'A beautiful sailing boat for water sports',
+    owned: 0
+  },
+  {
+    id: 'golf_membership',
+    name: 'Exclusive Golf Club Membership',
+    basePrice: 100_000,
+    currentPrice: 100_000,
+    category: ItemCategory.LUXURY,
+    description: 'Lifetime membership to an exclusive golf club',
+    owned: 0
+  },
   {
     id: 'designer_handbag',
     name: 'Designer Handbag',
