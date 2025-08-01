@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 import { immer } from 'zustand/middleware/immer'
 import { useEffect } from 'react'
 import { GameState, GameActions, GameItem, Company, Challenge } from '@/types/game'
+import { Achievement } from '@/types/game/achievements'
 import { 
   BILL_GATES_WEALTH, 
   INITIAL_ITEMS, 
@@ -300,7 +301,7 @@ export const useGameStore = create<GameStore>()(
         const state = get()
         
         set((draft) => {
-          draft.achievements.forEach((achievement) => {
+          draft.achievements.forEach((achievement: Achievement) => {
             if (achievement.isUnlocked) return
             
             let progress = 0
@@ -383,7 +384,7 @@ export const useGameStore = create<GameStore>()(
               // Add more achievement checks here
             }
             
-            const achievementToUpdate = draft.achievements.find(a => a.id === achievement.id)
+            const achievementToUpdate = draft.achievements.find((a: Achievement) => a.id === achievement.id)
             if (achievementToUpdate) {
               achievementToUpdate.progress = progress
               
@@ -405,7 +406,7 @@ export const useGameStore = create<GameStore>()(
 
       unlockAchievement: (achievementId: string) => {
         set((draft) => {
-          const achievement = draft.achievements.find(a => a.id === achievementId)
+          const achievement = draft.achievements.find((a: Achievement) => a.id === achievementId)
           if (achievement && !achievement.isUnlocked) {
             achievement.isUnlocked = true
             achievement.unlockedAt = Date.now()

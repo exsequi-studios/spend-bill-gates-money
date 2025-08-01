@@ -1,4 +1,5 @@
 // Import achievement types
+import { Achievement } from './achievements'
 export * from './achievements'
 
 // Game item categories

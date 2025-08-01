@@ -200,7 +200,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({ challenge }) => {
               <Button
                 onClick={handleStart}
                 className="w-full"
-                size="sm"
+
               >
                 {t.challenges.start}
               </Button>
@@ -212,7 +212,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({ challenge }) => {
                   onClick={handleStop}
                   variant="outline"
                   className="w-full"
-                  size="sm"
+  
                 >
                   {t.challenges.stop}
                 </Button>

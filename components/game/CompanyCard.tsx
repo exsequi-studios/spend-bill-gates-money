@@ -115,7 +115,7 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
                 onClick={handleSell}
                 variant="destructive"
                 className="w-full bg-orange-600 hover:bg-orange-700 dark:bg-orange-600 dark:hover:bg-orange-700"
-                size="sm"
+
               >
                 {t.companies.sell_one || 'Sell One'} ({formatMoney(sellPrice)})
               </Button>
@@ -124,7 +124,7 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
                 disabled
                 variant="outline"
                 className="w-full"
-                size="sm"
+
               >
                 {t.companies.no_companies || 'No Companies to Sell'}
               </Button>
