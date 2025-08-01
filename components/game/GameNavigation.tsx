@@ -86,7 +86,7 @@ export const GameNavigation: React.FC<GameNavigationProps> = ({
                 <Badge 
                   className={`${
                     currentTab === tab.id 
-                      ? 'bg-white text-blue-600' 
+                      ? 'bg-white dark:bg-gray-100 text-blue-600 dark:text-blue-700' 
                       : 'bg-blue-600 text-white'
                   }`}
                 >
@@ -122,7 +122,7 @@ export const GameNavigation: React.FC<GameNavigationProps> = ({
                   size="sm"
                   className={`text-xs ${
                     currentTab === tab.id 
-                      ? 'bg-white text-blue-600' 
+                      ? 'bg-white dark:bg-gray-100 text-blue-600 dark:text-blue-700' 
                       : 'bg-blue-600 text-white'
                   }`}
                 >

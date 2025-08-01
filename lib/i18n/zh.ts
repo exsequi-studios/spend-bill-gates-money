@@ -236,5 +236,12 @@ export const zh: Translation = {
     total_earned: "总收入",
     time_played: "游戏时间",
     time_up: "时间到！"
+  },
+  
+  theme: {
+    light: "浅色模式",
+    dark: "深色模式",
+    system: "系统设置",
+    toggle: "切换主题"
   }
 }

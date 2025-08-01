@@ -236,5 +236,12 @@ export const en: Translation = {
     total_earned: "Total Earned",
     time_played: "Time Played",
     time_up: "Time's up!"
+  },
+  
+  theme: {
+    light: "Light",
+    dark: "Dark",
+    system: "System",
+    toggle: "Toggle theme"
   }
 }

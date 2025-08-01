@@ -10,6 +10,7 @@ import { useGameStore, useGameTick } from '@/store/gameStore'
 import { useLanguageStore } from '@/store/languageStore'
 import { formatMoney, formatTime } from '@/data/gameData'
 import { LanguageSwitcher } from '@/components/ui/language-switcher'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export const GameHeader: React.FC = () => {
   const { 
@@ -84,6 +85,7 @@ export const GameHeader: React.FC = () => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+        <ThemeToggle />
         <LanguageSwitcher />
       </div>
       {/* Game Progress */}
@@ -181,7 +183,7 @@ export const GameHeader: React.FC = () => {
               )}
               <Button 
                 onClick={resetGame}
-                className="mt-4 bg-white text-gold hover:bg-gray-100"
+                className="mt-4 bg-white dark:bg-gray-800 text-yellow-600 dark:text-yellow-400 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 🔄 Play Again
               </Button>

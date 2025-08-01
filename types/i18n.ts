@@ -250,4 +250,11 @@ export interface Translation {
     time_played: string
     time_up: string
   }
+  
+  theme: {
+    light: string
+    dark: string
+    system: string
+    toggle: string
+  }
 }
