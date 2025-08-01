@@ -31,7 +31,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
   const { money, purchaseItem } = useGameStore()
   const { t, language } = useLanguageStore()
   const canAfford = money >= item.currentPrice
-  const isMaxedOut = item.maxOwned && item.owned >= item.maxOwned
+  const isMaxedOut = Boolean(item.maxOwned && item.owned >= item.maxOwned)
   
   const categoryLabels: Record<ItemCategory, string> = {
     [ItemCategory.FOOD]: t.categories.food,
@@ -89,9 +89,8 @@ export const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
           <div className="space-y-2">
             <Button
               onClick={handlePurchase}
-              disabled={!canAfford || isMaxedOut}
-              className="w-full"
-              size="sm"
+              disabled={Boolean(!canAfford || isMaxedOut)}
+              className="w-full h-8"
             >
               {isMaxedOut ? t.max_owned : canAfford ? t.buy_one : t.cannot_afford}
             </Button>

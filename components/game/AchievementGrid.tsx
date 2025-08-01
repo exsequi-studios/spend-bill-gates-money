@@ -33,9 +33,10 @@ export const AchievementGrid: React.FC = () => {
     }
     
     achievements.forEach(achievement => {
-      rarityStats[achievement.rarity].total++
+      const rarity = achievement.rarity as AchievementRarity
+      rarityStats[rarity].total++
       if (achievement.isUnlocked) {
-        rarityStats[achievement.rarity].unlocked++
+        rarityStats[rarity].unlocked++
       }
     })
     
@@ -82,7 +83,7 @@ export const AchievementGrid: React.FC = () => {
             [AchievementRarity.UNCOMMON]: 2,
             [AchievementRarity.COMMON]: 1
           }
-          return rarityOrder[b.rarity] - rarityOrder[a.rarity]
+          return rarityOrder[b.rarity as AchievementRarity] - rarityOrder[a.rarity as AchievementRarity]
         case 'progress':
           const aProgress = a.maxProgress > 0 ? a.progress / a.maxProgress : 0
           const bProgress = b.maxProgress > 0 ? b.progress / b.maxProgress : 0
@@ -176,21 +177,21 @@ export const AchievementGrid: React.FC = () => {
                 <Button
                   variant={filter === 'all' ? 'default' : 'outline'}
                   onClick={() => setFilter('all')}
-                  size="sm"
+  
                 >
                   全部 ({achievements.length})
                 </Button>
                 <Button
                   variant={filter === 'unlocked' ? 'default' : 'outline'}
                   onClick={() => setFilter('unlocked')}
-                  size="sm"
+  
                 >
                   已解锁 ({stats.unlocked})
                 </Button>
                 <Button
                   variant={filter === 'locked' ? 'default' : 'outline'}
                   onClick={() => setFilter('locked')}
-                  size="sm"
+  
                 >
                   未解锁 ({stats.total - stats.unlocked})
                 </Button>
@@ -198,7 +199,7 @@ export const AchievementGrid: React.FC = () => {
                   value={Object.values(AchievementType).includes(filter as AchievementType) ? filter : ''} 
                   onValueChange={(value: AchievementType) => setFilter(value)}
                 >
-                  <SelectTrigger size="sm">
+                  <SelectTrigger className="h-9">
                     <SelectValue placeholder="按类型筛选" />
                   </SelectTrigger>
                   <SelectContent>

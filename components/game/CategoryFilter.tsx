@@ -12,7 +12,7 @@ interface CategoryFilterProps {
   itemCounts: Record<ItemCategory, number>
 }
 
-const getCategoryLabels = (t: any): Record<ItemCategory, string> => {
+const getCategoryLabels = (t: { categories?: Record<string, string> } | null): Record<ItemCategory, string> => {
   if (!t || !t.categories) {
     // Fallback labels if translation is not loaded
     return {

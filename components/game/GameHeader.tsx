@@ -18,7 +18,6 @@ export const GameHeader: React.FC = () => {
     initialMoney, 
     isGameComplete, 
     currentChallenge,
-    companies,
     resetGame,
     stats
   } = useGameStore()
@@ -43,10 +42,7 @@ export const GameHeader: React.FC = () => {
   const spentMoney = initialMoney - money
   const spendingProgress = (spentMoney / initialMoney) * 100
 
-  // Calculate total passive income
-  const totalPassiveIncome = companies.reduce((total, company) => {
-    return total + (company.currentIncomePerSecond * company.owned)
-  }, 0)
+  // Note: totalPassiveIncome calculation removed as it was unused
 
   // Calculate challenge timer if active
   let challengeTimeElapsed = 0

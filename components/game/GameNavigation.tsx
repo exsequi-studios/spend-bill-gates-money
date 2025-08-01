@@ -119,7 +119,6 @@ export const GameNavigation: React.FC<GameNavigationProps> = ({
               <span className="font-medium text-sm">{tab.label}</span>
               {tab.badge && (
                 <Badge 
-                  size="sm"
                   className={`text-xs ${
                     currentTab === tab.id 
                       ? 'bg-white dark:bg-gray-100 text-blue-600 dark:text-blue-700' 
